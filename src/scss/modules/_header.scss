@@ -1,0 +1,243 @@
+.header {
+  padding-top: 42px;
+  min-height: 100vh;
+  background-image: url(../../images/bg/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 180px;
+  }
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 60px;
+    width: 760px;
+    margin-bottom: 25px;
+    .title__mod {
+      display: block;
+      position: relative;
+      z-index: 2;
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: 3px;
+        background-color: $colorAccent;
+        bottom: 0;
+        right: 0;
+        left: -11px;
+        top: 0;
+        z-index: -1;
+      }
+    }
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 34px;
+  }
+  &__subtitle-mobile {
+    display: none;
+  }
+  &__main-btn {
+    padding: 20px 32px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list-item + .menu__list-item {
+    margin-left: 52px;
+  }
+  &__list-item-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+.logo {
+  min-width: 149px;
+  height: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 17px;
+    min-height: 1140px;
+    background-image: url(../../images/bg/header-bg-768.jpg);
+    &__top-btn {
+      font-size: 16px;
+      padding: 13px 28px;
+      border-radius: 5px;
+    }
+    &__top {
+      margin-bottom: 300px;
+    }
+    &__title {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 650px;
+      font-size: 36px;
+      line-height: 60px;
+      margin-bottom: 35px;
+      .title__mod {
+        &::before {
+          left: 0;
+          right: 0;
+        }
+      }
+      .title__extra {
+        display: none;
+      }
+    }
+    &__subtitle {
+      display: none;
+    }
+    &__subtitle-mobile {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 45px;
+      span {
+        padding: 8px;
+        background-color: #fff;
+        color: $colorAccent;
+        border-radius: 3px;
+        font-weight: 700;
+      }
+    }
+    &__main-btn {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .menu {
+    &__list-item + .menu__list-item {
+      margin-left: 34px;
+    }
+    &__list-item-link {
+      font-size: 16px;
+    }
+  }
+  .logo {
+    min-width: 124px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    min-height: 720px;
+    &__top-btn {
+      padding: 11px 21px;
+      font-size: 14px;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+    &__title {
+      width: 100%;
+      max-width: 100%;
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 32px;
+    }
+    &__top {
+      margin-bottom: 96px;
+    }
+    &__subtitle-mobile {
+      font-size: 16px;
+      line-height: 31px;
+      padding: 0 20px;
+      margin-bottom: 32px;
+      span {
+        padding: 4px;
+      }
+    }
+    &__main-btn {
+      font-size: 16px;
+      padding: 18px 56px;
+    }
+  }
+  // .menu {
+  //   display: none;
+  //   transform: translateY(-100%);
+  // }
+  .menu {
+    display: block;
+    transform: translateY(-100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    transition: 0.7s all;
+    background-color: $colorAccent;
+    &--active {
+      transform: translateY(0%);
+    }
+    .menu__list {
+      z-index: 4;
+      padding: 68px 0;
+      flex-direction: column;
+    }
+    .menu__list-item + .menu__list-item {
+      margin-left: 0;
+      position: relative;
+      &::before {
+        content: "";
+        width: 162px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.52);
+        position: absolute;
+      }
+    }
+    .menu__list-item-link {
+      text-align: center;
+      display: block;
+      padding: 23px 0;
+    }
+  }
+  .logo {
+    min-width: 100px;
+    height: 11px;
+  }
+  .hamburger {
+    position: relative;
+    z-index: 10;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    background-image: url(../../images/icons/hamburger-closed.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+  }
+  .hamburger--active {
+    background-image: url(../../images/icons/hamburger-opened.svg);
+  }
+}
