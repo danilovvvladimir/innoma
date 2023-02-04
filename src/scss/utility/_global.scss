@@ -8,8 +8,8 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1246px;
+  padding: 0 20px;
+  max-width: 1256px;
 }
 
 .btn {
@@ -44,4 +44,9 @@ body {
   font-weight: 700;
   font-size: 36px;
   color: $colorTitle;
+}
+@media (max-width: 760px) {
+  .title {
+    text-align: center;
+  }
 }
