@@ -45,8 +45,21 @@ body {
   font-size: 36px;
   color: $colorTitle;
 }
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .title {
     text-align: center;
+  }
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.3s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
   }
 }

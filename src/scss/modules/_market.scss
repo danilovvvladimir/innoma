@@ -1,0 +1,312 @@
+.market {
+  padding-top: 100px;
+  &__title {
+    font-size: 36px;
+    line-height: 80px;
+    margin-bottom: 35px;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #cfddeb;
+    border-radius: 5px;
+    margin-bottom: 56px;
+  }
+  &__tab {
+    background: #eef1f4;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    width: 304px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #cfddeb;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      &::after {
+        width: 0;
+      }
+    }
+  }
+  &__tab--active {
+    font-weight: 700;
+    background: #88bbd8;
+    border-radius: 5px;
+    color: #fff;
+    &::after {
+      width: 0;
+    }
+  }
+  &__tabs-content {
+    background-image: url(../../images/bg/market-bg.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 55%;
+  }
+
+  &__tab-content {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s all;
+    &-title {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 41px;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      span {
+        display: block;
+        color: $colorAccent;
+      }
+    }
+    &-text {
+      max-width: 272px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 35px;
+    }
+  }
+  &__tab-author {
+    display: flex;
+    align-items: center;
+    &-photo {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+    }
+    &-about {
+      margin-left: 11px;
+      color: #000;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    &-profession {
+      padding-top: 5px;
+      display: block;
+      font-size: 14px;
+      color: #727272;
+    }
+  }
+  &__tab-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 289px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+    margin-right: 157px;
+  }
+  &__tab-card {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-number {
+      color: rgba(17, 120, 178, 0.5);
+      font-weight: 800;
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 24px;
+        line-height: 20px;
+        margin-left: 7px;
+      }
+    }
+    &-about {
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(16, 16, 16, 0.5);
+      font-weight: 400;
+    }
+  }
+  &__tab-card--download {
+    background-color: $colorTitle;
+    cursor: pointer;
+    transition: 0.5s all;
+    &:hover {
+      background-color: $colorAccent;
+    }
+    .market__tab-card-number {
+      margin-bottom: 25px;
+    }
+    .market__tab-card-about {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: #ffffff;
+      max-width: 167px;
+      font-weight: 500;
+    }
+  }
+  &__btn {
+    padding: 20px 47px;
+    margin-bottom: 35px;
+  }
+}
+
+.market__btn--mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .market {
+    &__title {
+      font-size: 32px;
+    }
+    &__tabs-content {
+      background-size: 100%;
+    }
+    &__tab {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      padding: 19px 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__tab-content-left {
+      display: flex;
+      flex-direction: column;
+    }
+    &__tab-author {
+      order: 3;
+      margin-bottom: 35px;
+    }
+    &__btn {
+      order: 4;
+      margin-bottom: 0;
+    }
+    &__tab-content-title {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 17px;
+      order: 1;
+    }
+    &__tab-content-text {
+      font-size: 16px;
+      line-height: 22px;
+      order: 2;
+    }
+    &__tab-cards {
+      grid-template-columns: repeat(2, 193px);
+      grid-template-rows: repeat(2, 133px);
+      margin-right: 0;
+    }
+    &__tab-card-number {
+      font-size: 36px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+    &__tab-card-about {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__tab-card--download {
+      .market__tab-card-number {
+        margin-bottom: 15px;
+        svg {
+          width: 25px;
+          height: 21px;
+        }
+      }
+      .market__tab-card-about {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .market {
+    &__title {
+      font-size: 24px;
+      line-height: 35px;
+      padding: 0 20px;
+    }
+    &__tab {
+      font-size: 10px;
+      line-height: 16px;
+      padding: 12px 4px;
+    }
+    &__tab-content-title {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+    &__tab-content-text {
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+    &__btn {
+      display: none;
+    }
+    &__tab-content {
+      flex-direction: column;
+    }
+    &__tab-card-number {
+      font-size: 24px;
+      flex-direction: column;
+      line-height: 20px;
+    }
+    &__tab-card-about {
+      font-size: 12px;
+      line-height: 20px;
+      padding: 0 28px;
+    }
+    &__tab-content-left {
+      margin-bottom: 15px;
+    }
+    &__tab-content-right {
+      display: flex;
+      justify-content: center;
+    }
+    &__tab-cards {
+      grid-template-columns: 150px 150px;
+      grid-template-rows: 134px 134px;
+    }
+    &__tab-card--download {
+      .market__tab-card-number {
+        margin-bottom: 15px;
+        svg {
+          width: 25px;
+          height: 21px;
+        }
+      }
+      .market__tab-card-about {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0 24px;
+      }
+    }
+  }
+  .market__btn--mobile {
+    display: block;
+    font-size: 16px;
+    padding: 20px 47px;
+    width: 100%;
+    margin-top: 35px;
+  }
+}
