@@ -1,0 +1,114 @@
+.prices {
+  padding-top: 100px;
+  &__title {
+    font-size: 36px;
+    line-height: 80px;
+    margin-bottom: 35px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 392px);
+    grid-template-rows: repeat(1, 798px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  &__item {
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 30px 0;
+  }
+  &__item-top {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-img {
+    height: 76px;
+    margin-bottom: 15px;
+  }
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #1b1b1b;
+    margin-bottom: 28px;
+  }
+  &__report {
+    padding: 0 40px;
+    min-height: 280px;
+    position: relative;
+    margin-bottom: 15px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #e3e3e3;
+    }
+  }
+  &__report-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 60px;
+  }
+  &__report-list {
+    padding-left: 23px;
+  }
+  &__report-list-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+  }
+  &__item-infobox {
+    margin-bottom: 20px;
+  }
+  &__item-info {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &-name {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 60px;
+    }
+    &-status {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 60px;
+      &--price {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 60px;
+        color: #1178b2;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #e3e3e3;
+    }
+  }
+  &__btnbox {
+    padding: 0 40px;
+    margin-top: auto;
+  }
+  &__btn {
+    width: 100%;
+  }
+}
