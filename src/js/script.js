@@ -33,3 +33,34 @@ tabsParent.addEventListener("click", (e) => {
     });
   }
 });
+
+const programmModules = document.querySelectorAll(".programm__module-info");
+const programmModulesParent = document.querySelector(".programm__module-top");
+const programmModulesBtn = document.querySelectorAll(
+  ".programm__module-arrow-btn"
+);
+
+function hideModulesInfo() {
+  programmModules.forEach((item) =>
+    item.classList.remove("programm__module-info--active")
+  );
+  programmModulesBtn.forEach((btn) => {
+    btn.classList.remove("programm__module-arrow-btn--active");
+  });
+}
+
+function showModulesInfo(index = 0) {
+  programmModules[index].classList.toggle("programm__module-info--active");
+  programmModulesBtn[index].classList.toggle(
+    "programm__module-arrow-btn--active"
+  );
+}
+
+hideModulesInfo();
+showModulesInfo();
+
+programmModulesBtn.forEach((btn, index) => {
+  btn.addEventListener("click", (e) => {
+    showModulesInfo(index);
+  });
+});

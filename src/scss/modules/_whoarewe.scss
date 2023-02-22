@@ -1,0 +1,63 @@
+.whoarewe {
+  padding-top: 100px;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 125px;
+  }
+  &__textbox {
+    padding-top: 100px;
+    max-width: 565px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  &__text {
+    font-weight: 300;
+    margin-bottom: 50px;
+    span {
+      font-weight: 600;
+      color: #1178b2;
+    }
+  }
+  &__ceo {
+    padding: 0 65px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  &__ceo-textbox {
+    max-width: 608px;
+  }
+  &__ceo-text {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 50px;
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  &__ceo-about {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    span {
+      display: block;
+      font-weight: 300;
+    }
+  }
+  &__photos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__photo-img {
+    cursor: pointer;
+  }
+}
