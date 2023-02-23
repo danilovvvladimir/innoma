@@ -1,0 +1,33 @@
+.community {
+  margin-top: 80px;
+  padding: 131px 0;
+  background-image: url(../../images/bg/international-community-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+  }
+  &__title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    max-width: 1018px;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    max-width: 761px;
+  }
+  &__btn {
+    padding: 18px 77px;
+  }
+}
