@@ -1,0 +1,32 @@
+.footer {
+  padding: 20px 0;
+  background-image: url(../../images/bg/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+    .logo {
+      margin-bottom: 20px;
+    }
+  }
+  &__contacts {
+    max-width: 212px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &__contacts-address {
+    margin-bottom: 20px;
+  }
+  &__contacts-email {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
