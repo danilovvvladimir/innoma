@@ -1,3 +1,15 @@
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  slidesPerView: 4,
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    prevEl: ".swiper-button-left",
+    nextEl: ".swiper-button-right",
+  },
+});
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
 

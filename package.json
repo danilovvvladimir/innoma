@@ -24,5 +24,8 @@
     "sass": "^1.57.1",
     "slick-carousel": "^1.8.1",
     "star-rating-svg": "^3.5.0"
+  },
+  "dependencies": {
+    "swiper": "^9.0.5"
   }
 }
